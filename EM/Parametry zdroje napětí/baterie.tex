@@ -148,9 +148,9 @@ Výkon baterie do zátěže $R_z$:
 P = \frac{U^{2}}{R_z} = U \cdot I \qquad [W; V, \Omega]
 \end{equation}
 
-Grafickou extrapolací zjistíme, že napětí naprázdno je $U_0 = 1,64V$ a proud nakrátko je přibližně $I_k = 16mA$. Pro výpočet vnitřního odporu $R_i$ si zvolímě body pro výpočet $\Delta U$ tak, aby nedošlo k ovlivnění výsledku vlivem deformace grafu.
+Grafickou extrapolací zjistíme, že napětí naprázdno je $U_0 = 1,64V$ a proud nakrátko je přibližně $I_k = 16mA$. Pro výpočet vnitřního odporu $R_i$ si zvolímě body v okolí bodu s největším výkonem baterie do zátěže. Poměr $R_z/R_i$ by měl být blízký hodnotě $1$. V takovém případě dodává baterie do zátěže $R_z$ největší výkon.
 \begin{equation}
-R_i = \frac{\Delta U}{\Delta I} = \frac{1,26 - 0,41}{10,51 - 2,02} = 100,118\Omega
+R_i = \frac{\Delta U}{\Delta I} = \frac{0,88 - 0,08}{16,00\cdot 10^{-3} - 5,63\cdot 10^{-3}} = 77,146\Omega
 \end{equation}
 
 \section{Grafy}
@@ -216,7 +216,7 @@ R_i = \frac{\Delta U}{\Delta I} = \frac{1,26 - 0,41}{10,51 - 2,02} = 100,118\Ome
 \end{figure}
 
 \section{Závěr}
-Baterie dává do obvodu maximální výkon při odporu zátěže $78\Omega$ kdy výkon dosahuje více než $5mW$. To se dalo předpokládat, protože v ten okamžik dodávala baterie do obvodu největší násobek proudu a napětí.
+Baterie dává do obvodu maximální výkon při odporu zátěže $78\Omega$ kdy výkon dosahuje více než $5mW$. To se dalo předpokládat, protože v ten okamžik dodávala baterie do obvodu největší násobek proudu a napětí. Zároveň to odpovídá o předpokladu, že pokud dodává baterie do zátěže největší výkon, měl by být poměr odporu zátěže a vnitřního odporu limitně blizký k jedné.
 
 \section{Přístroje}
 \begin{itemize}

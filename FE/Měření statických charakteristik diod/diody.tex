@@ -188,7 +188,7 @@ R_{D(KY 130/150)}=\frac{\Delta U}{\Delta I}=\frac{U_2-U_1}{I_2-I_1}=\frac{0,62-0
 	\begin{tikzpicture}
 		\begin{axis}[
 			width=1\textwidth,
-	      	height=0.5\textwidth,
+	      	height=0.4\textwidth,
 			xlabel={$U[V]$},
 			ylabel={$I[mA]$}]
 			
@@ -286,7 +286,7 @@ R_{D(KY 130/150)}=\frac{\Delta U}{\Delta I}=\frac{U_2-U_1}{I_2-I_1}=\frac{0,62-0
 	\begin{tikzpicture}
 		\begin{axis}[
 			width=1\textwidth,
-	      	height=0.5\textwidth,
+	      	height=0.3\textwidth,
 			xlabel={$U[V]$},
 			ylabel={$I[uA]$},
 			legend style={
@@ -389,8 +389,10 @@ y=0.00006\cdot (20.7061)^x
 Tato aproximace je na jednu stranu nepřesná v měřeném úseku, na druhou stranu je snadno předvídatelnná. Logisitcká regrese oproti exponenciální velmi dobře aproximuje konkrétní měřené hodnoty, avšak mimo definiční obor a měřený obor hodnot již nabývá nesprávných hodnot.
 
 \section{Závěr}
-Celkem bylo měřeno šest druhů diod. Svítivá LED dioda modrá (ZnSe, InGaN, SiC, Si), LED dioda žlutá (GaAsP, AlGaInP, GaP), dále dvě usměrňovací (1N4007 a KY 130/150), germaniová (D9D) a Schottkyho dioda (SB 360). Za povšimnutí stojí, že usměrňovací diody, ačkoliv jsou odlišné, mají velice podobné V-A charakteristiky.
+Celkem bylo měřeno šest druhů diod. Svítivá LED dioda modrá (složení ZnSe, InGaN, SiC, Si), LED dioda žlutá (složení GaAsP, AlGaInP, GaP), dále dvě usměrňovací (1N4007 a KY 130/150), germaniová (D9D) a Schottkyho dioda (SB 360). Za povšimnutí stojí, že usměrňovací diody, ačkoliv jsou odlišné, mají velice podobné V-A charakteristiky.
 
 Prahová napětí se v rozsahu měření velmi liší. Největší hodnotu prahového napětí naměříme na svítivých LED diodách, konkrétně na modré zhruba $3V$ viz graf V-A charakteristika v propustném směru. Usměrňovací diody mají prahové napětí stejné a to přibližně $0,5V$. Nejmenší prahová napětí naměříme na Schottkyho diodě ($0,2V$) a o něco málo větší na germaniové diodě ($0,3V$).
+
+Dynamický odpor se vůči statickému liší v závislosti na místě odečítání hodnoty a tedy skonu měřené křivky. V jednom stejném bodě může být dynamický i statický odpor rozdílný.
 
 \end{document}
