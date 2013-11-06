@@ -93,6 +93,23 @@ velikosti kapacity vyhlazovacího kondenzátoru na špičkovou hodnotu výstupn�
 napětí $U_{max}$ a míru zvlnění.
 \end{enumerate}
 
+\section{Katalogové parametry měřených součástek}
+Při měření byla jako usměrňovací dioda použita 4x BYW96.
+\begin{table}[H]
+\caption{Mezní hodnoty diody BYW96}
+\begin{tabular}{|c|c|}
+\hline 
+Mezní hodnota proudu v propustném směru $I_F$ & max. $3 A$ \\ 
+\hline 
+Mezní hodnota proudu v závěrném směru $I_R$ & max. $1 uA$ \\ 
+\hline 
+Průrazné napětí v závěrném směru $V_{(BR)R}$ & max. $900 V$ \\ 
+\hline 
+Obnovovací čas $t_{rr}$ & $300 ns$ \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
 \section{Schéma zapojení}
 \begin{figure}[H]
 \includegraphics[scale=0.8]{schema.png}
@@ -108,13 +125,13 @@ napětí $U_{max}$ a míru zvlnění.
 
 \begin{figure}[H]
 \center
-\includegraphics[scale=0.6]{jednocestny100.jpg}
+\includegraphics[scale=0.7]{jednocestny100.jpg}
 \caption{Tvary průběhů jednocestného usměrňovače pro $R_Z = 100\Omega$}
 \end{figure}
 
 \subsection{Naměřené a vypočtené hodnoty}
 \begin{table}[H]
-\center
+\caption{Jednocestný usměrňovač s $R_Z=30\Omega$}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
 • & bez kondenzátoru & $C_1 = 100uF$ & $C_2 = 220uF$ & $C_3 = 470uF$ \\ 
@@ -132,11 +149,10 @@ $\Delta U [V]$ & 8,24 & 8,32 & 8,90 & 5,32 \\
 $p [\%]$ & 64,5 & 49,6 & 18,2 & 5,8 \\ 
 \hline 
 \end{tabular}
-\caption{Jednocestný usměrňovač s $R_Z=30\Omega$}
 \end{table}
 
 \begin{table}[H]
-\center
+\caption{Jednocestný usměrňovač s $R_Z=100\Omega$}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
 • & bez kondenzátoru & $C_1 = 100uF$ & $C_2 = 220uF$ & $C_3 = 470uF$ \\ 
@@ -154,7 +170,6 @@ $\Delta U [V]$ & 8,72 & 8,02 & 4,80 & 3,22 \\
 $p [\%]$ & 63,4 & 20,3 & 3,2 & 0,7 \\ 
 \hline 
 \end{tabular}
-\caption{Jednocestný usměrňovač s $R_Z=100\Omega$}
 \end{table}
 
 Kde zvlnění výstupního napětí $\Delta U$:
@@ -163,26 +178,26 @@ Kde zvlnění výstupního napětí $\Delta U$:
 \end{equation}
 Činitel zvlnění $p$:
 \begin{equation}
-p = \left( \frac{U}{U_0} -1 \right) \cdot 100 = \left( \frac{4,13}{2,51} -1 \right) \cdot 100 = 64,5\%
+p = \sqrt{\left( \frac{U}{U_0} -1 \right)^2} \cdot 100 = \sqrt{\left( \frac{4,13}{2,51} -1 \right)^2} \cdot 100 = 64,5\%
 \end{equation}
 Stejným způsobem se vypočítává zvlnění výstupního napětí a činitel tohoto zvlnění u všech dalších obvodů.
 
 \section{Dvoucestný usměrňovač}
 \begin{figure}[H]
 \center
-\includegraphics[scale=0.6]{dvoucestny30.jpg}
+\includegraphics[scale=0.7]{dvoucestny30.jpg}
 \caption{Tvary průběhů dvoucestného usměrňovače pro $R_Z = 30\Omega$}
 \end{figure}
 
 \begin{figure}[H]
 \center
-\includegraphics[scale=0.6]{dvoucestny100.jpg}
+\includegraphics[scale=0.7]{dvoucestny100.jpg}
 \caption{Tvary průběhů dvoucestného usměrňovače pro $R_Z = 100\Omega$}
 \end{figure}
 
 \subsection{Naměřené a vypočtené hodnoty}
 \begin{table}[H]
-\center
+\caption{Dvoucestný usměrňovač s $R_Z=30\Omega$}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
 • & bez kondenzátoru & $C_1 = 100uF$ & $C_2 = 220uF$ & $C_3 = 470uF$ \\ 
@@ -200,11 +215,10 @@ $\Delta U$ & 8,35 & 7,23 & 4,77 & 3,81 \\
 $p [\%]$ & 13,7 & 9,7 & 3,3 & 0,9 \\ 
 \hline 
 \end{tabular}
-\caption{Dvoucestný usměrňovač s $R_Z=30\Omega$}
 \end{table}
 
 \begin{table}[H]
-\center
+\caption{Dvoucestný usměrňovač s $R_Z=100\Omega$}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
 • & bez kondenzátoru & $C_1 = 100uF$ & $C_2 = 220uF$ & $C_3 = 470uF$ \\ 
@@ -222,25 +236,24 @@ $\Delta U$ & 8,75 & 5,60 & 3,94 & 1,54 \\
 $p [\%]$ & 13,7 & 3,8 & 0,7 & 0,1 \\ 
 \hline 
 \end{tabular}
-\caption{Dvoucestný usměrňovač s $R_Z=100\Omega$}
 \end{table}
 
 \section{Můstkový usměrňovač}
 \begin{figure}[H]
 \center
-\includegraphics[scale=0.6]{mustkovy30.jpg}
+\includegraphics[scale=0.7]{mustkovy30.jpg}
 \caption{Tvary průběhů můstkového usměrňovače pro $R_Z = 30\Omega$}
 \end{figure}
 
 \begin{figure}[H]
 \center
-\includegraphics[scale=0.6]{mustkovy100.jpg}
+\includegraphics[scale=0.7]{mustkovy100.jpg}
 \caption{Tvary průběhů můstkového usměrňovače pro $R_Z = 100\Omega$}
 \end{figure}
 
 \subsection{Naměřené a vypočtené hodnoty}
 \begin{table}[H]
-\center
+\caption{Můstkový usměrňovač s $R_Z=30\Omega$}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
 • & bez kondenzátoru & $C_1 = 100uF$ & $C_2 = 220uF$ & $C_3 = 470uF$ \\ 
@@ -258,11 +271,10 @@ $\Delta U$ & 8,63 & 6,62 & 4,37 & 2,71 \\
 $p [\%]$ & 16,5 & 10,9 & 3,5 & 0,8 \\ 
 \hline 
 \end{tabular}
-\caption{Můstkový usměrňovač s $R_Z=30\Omega$}
 \end{table}
 
 \begin{table}[H]
-\center
+\caption{Můstkový usměrňovač s $R_Z=100\Omega$}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
 • & bez kondenzátoru & $C_1 = 100uF$ & $C_2 = 220uF$ & $C_3 = 470uF$ \\ 
@@ -280,7 +292,6 @@ $\Delta U$ & 8,01 & 4,39 & 2,59 & 1,29 \\
 $p [\%]$ & 16,0 & 3,9 & 0,5 & 0,1 \\ 
 \hline 
 \end{tabular}
-\caption{Můstkový usměrňovač s $R_Z=100\Omega$}
 \end{table}
 
 \section{Závěr}
