@@ -128,11 +128,14 @@ $\Delta a_u\,[dB]$ & 19 & 16 & 11 & 2 & 1 & 1 & 1,9 & 4,5 & 9 & 14 \\
 \begin{figure}[H]
 \centering
 	\begin{tikzpicture}
-		\begin{axis}[
+		%\begin{axis}[
+			
+		\begin{semilogxaxis}[
 			width=1\textwidth,
-	      	height=0.9\textwidth,
+	     	height=0.9\textwidth,
 			xlabel={$f\,[Hz]$},
-			ylabel={$\Delta a_u\,[dB]$}]
+			ylabel={$\Delta a_u\,[dB]$}
+		]
 			
 		\addplot coordinates {
 			(16,-0.4)
@@ -176,12 +179,36 @@ $\Delta a_u\,[dB]$ & 19 & 16 & 11 & 2 & 1 & 1 & 1,9 & 4,5 & 9 & 14 \\
 		};
 		\addlegendentry{maximum}
 		
-		\end{axis}
+		\end{semilogxaxis}
 	\end{tikzpicture}
 	\caption{Přenosové kmitočtové charakterisitky pro mezní polohy korekce}
 \end{figure}
 
 Šířku pásma $B$ určíme ze vztahu $B = f_H - f_L$, kde $f_H$ je horní a $f_L$ dolní frekvence odpovídající poklesu zisku o $3\,dB$ od referenční úrovně. Pro obě mezní polohy korekce jsou odpovídající frekvence přibližně stejné a to $f_H = 3000\,Hz$ a $f_L = 300\,Hz$, takže šířka pásma $B = f_H - f_L = 3000 - 300 = 2700\,Hz$.
+
+Na obrázcích níže lze vidět účinky předzesilovače na obdélníkový signál při použití například RC pásmové propusti. Vždy dochází k jinému zkreslení v závislosti na tom, jestli filtrem potlačujeme vysoké, nebo nízké frekvence.
+
+\begin{figure}[H]
+\includegraphics[scale=0.065]{IMG_20131119_133630.jpg}
+\includegraphics[scale=0.065]{IMG_20131119_133652.jpg}
+\caption{Potlačení vysokých, resp. nízkých frekvencí}
+\end{figure}
+
+Obdobně je tomu i na následujících obrázcích, zde však dochází k zesilování vysokých, nebo nízkých frekvencí. Jak je vidět, tak to odpovídá přesnému opaku předchozího případu. Tam kde původně byla část kmitu potlačena, tam je nyní zesílena a naopak.
+
+\begin{figure}[H]
+\includegraphics[scale=0.065]{IMG_20131119_133755.jpg}
+\includegraphics[scale=0.065]{IMG_20131119_133807.jpg}
+\caption{Zesílení vysokých, resp. nízkých frekvencí}
+\end{figure}
+
+Sloučením zesílení jak vysokých, tak nízkých frekvencí získáme následující obrázky. Stejně je tomu pro potlačení frekvencí. Výsledné průběhy odpovídají sloučením předchozích dvou průběhů vždy příslušejících k danému zesílení, resp. potlačení.
+
+\begin{figure}[H]
+\includegraphics[scale=0.065]{IMG_20131119_133721.jpg}
+\includegraphics[scale=0.065]{IMG_20131119_133835.jpg}
+\caption{Potlačení, resp. zesílení vysokých a nízkých frekvencí}
+\end{figure}
 
 \section{Závěr}
 Šířka pásma zesilovače pro obě nastavení korekcí je přibližně $2700\,Hz$. Vzrůst resp. pokles zisku vůči zisku na referenčním kmitočtu což je v našem případě $1\,kHz$ je vidět z grafu. Při referenčním kmitočku k žádnému zvrůstu ani poklesu nedochází, oproti tomu v mezních kmitočtech měření k těmto vzrůstům, resp. poklesům dochází a to souměrně podle referenční hodnoty $0\,dB$.
